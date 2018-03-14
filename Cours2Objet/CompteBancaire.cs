@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Cours2Objet
 {
-    class CompteBancaire
+    public class CompteBancaire
     {
         public string Titulaire { get; set; }
         public double Solde { get; set; }
-        public string Devise { get; set; }
+        public DevisesMonaitaires Devise { get; set; }
 
-        public CompteBancaire(string titulaire, double solde, string devise)
+        public CompteBancaire(string titulaire, double solde, DevisesMonaitaires devise)
         {
             Titulaire = titulaire;
             Solde = solde;
@@ -28,6 +28,13 @@ namespace Cours2Objet
         {
             Solde -= montant;
         }
+
+		public double SoldeConverter(DevisesMonaitaires converttothisdevise)
+		{
+			double value;
+			value = (Solde * Devise.Taux) * converttothisdevise.Taux;
+			return value;
+		}
 
     }
 }
