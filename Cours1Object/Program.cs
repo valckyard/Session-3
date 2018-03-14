@@ -10,6 +10,8 @@ namespace Cours1Object
     {
         static void Main(string[] args)
         {
+
+
         }
     }
 }
