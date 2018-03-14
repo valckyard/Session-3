@@ -17,9 +17,10 @@ namespace Cours2Object_Exercice
 
         public void Afficher()
         {
-            Console.WriteLine("Titre  : "+ Titre +"\n" +
-                              "Auteur : " + NomAuteur+ "\n" +
-                              "Prix   : "+ Prix +"\n");
+         
+            Console.WriteLine("Titre  : " + Titre + "\n" +
+                              "Auteur : " + NomAuteur + "\n" +
+                              "Prix   : " + Prix.ToString("C2") + "\n");
 
         }
     }

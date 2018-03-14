@@ -10,7 +10,7 @@ namespace Cours2Object_Exercice
     {
         static void Main(string[] args)
         {
-            var sda = new Livre("Le Seigneur des Anneaux Book 1","J.R.R. Tolkien", 39.99);
+            var sda = new Livre("Le Seigneur des Anneaux Book 1","J.R.R. Tolkien", 39.20);
             var sda2 = new Livre("Le Seigneur des Anneaux Book 2", "J.R.R. Tolkien", 29.99);
 
             sda.Afficher();
