@@ -10,11 +10,15 @@ namespace Cours2Object_Exercice
     {
         static void Main(string[] args)
         {
+            var tax = new Taxes(0.075,0.05);
             var sda = new Livre("Le Seigneur des Anneaux Book 1","J.R.R. Tolkien", 39.20);
             var sda2 = new Livre("Le Seigneur des Anneaux Book 2", "J.R.R. Tolkien", 29.99);
 
             sda.Afficher();
             sda2.Afficher();
+
+            sda.AfficherAvecTaxes(tax);
+            sda2.AfficherAvecTaxes(tax);
         }
     }
 }
