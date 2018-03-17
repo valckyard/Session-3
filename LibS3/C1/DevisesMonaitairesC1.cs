@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Cours2Objet
+﻿namespace LibS3.C1
 {
-	public class DevisesMonaitaires
+	public class DevisesMonaitairesC1
 	{
 		public DevName Name {
 			get;
@@ -13,7 +11,7 @@ namespace Cours2Objet
 			set;
 		}
 
-		public DevisesMonaitaires (DevName name, double taux)
+		public DevisesMonaitairesC1 (DevName name, double taux)
 		{
 			Name = name;
 			Taux = taux;

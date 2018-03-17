@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Cours2Objet
+﻿namespace LibS3.C1
 {
-    public class CompteBancaire
+    public class CompteBancaireC1
     {
         public string Titulaire { get; set; }
         public double Solde { get; set; }
-        public DevisesMonaitaires Devise { get; set; }
+        public DevisesMonaitairesC1 Devise { get; set; }
 
-        public CompteBancaire(string titulaire, double solde, DevisesMonaitaires devise)
+        public CompteBancaireC1(string titulaire, double solde, DevisesMonaitairesC1 devise)
         {
             Titulaire = titulaire;
             Solde = solde;
@@ -29,7 +23,7 @@ namespace Cours2Objet
             Solde -= montant;
         }
 
-		public double SoldeConverter(DevisesMonaitaires converttothisdevise)
+		public double SoldeConverter(DevisesMonaitairesC1 converttothisdevise)
 		{
 			double value;
 			value = (Solde * Devise.Taux) * converttothisdevise.Taux;

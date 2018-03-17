@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2F30839-C5AD-4AD1-9118-2FD3A3CF5FE0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Cours2Object_Exercice</RootNamespace>
-    <AssemblyName>Cours2Object Exercice</AssemblyName>
+    <ProjectGuid>{4DABB73B-170D-4EFB-B0F2-687E03E1AC2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibS3</RootNamespace>
+    <AssemblyName>LibS3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="C1\CompteBancaireC1.cs" />
+    <Compile Include="C1\DevisesMonaitairesC1.cs" />
+    <Compile Include="C3\EmployeC3.cs" />
+    <Compile Include="C2\LivreC2.cs" />
+    <Compile Include="C3\LivreC3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="C2\RectangleC2.cs" />
+    <Compile Include="C3\RectangleC3.cs" />
+    <Compile Include="C2\TaxesC2.cs" />
+    <Compile Include="C3\TaxesC3.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibS3\LibS3.csproj">
-      <Project>{4dabb73b-170d-4efb-b0f2-687e03e1ac2c}</Project>
-      <Name>LibS3</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

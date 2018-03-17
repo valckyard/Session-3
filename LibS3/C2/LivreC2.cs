@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace Cours2Object_Exercice
+namespace LibS3.C2
 {
-    public class Livre
+    public class LivreC2
     {
         public string Titre { get; set; }
         public string NomAuteur { get; set; }
         public double Prix { get; set; }
 
-        public Livre(string titre, string nomAuteur, double prix)
+        public LivreC2(string titre, string nomAuteur, double prix)
         {
             Titre = titre;
             NomAuteur = nomAuteur;
@@ -24,7 +24,7 @@ namespace Cours2Object_Exercice
 
         }
 
-        public void AfficherAvecTaxes(Taxes taxes)
+        public void AfficherAvecTaxes(TaxesC2 taxes)
         {
             Console.WriteLine("Titre  : " + Titre + "\n" +
                               "Auteur : " + NomAuteur + "\n" +

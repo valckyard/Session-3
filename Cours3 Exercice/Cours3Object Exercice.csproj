@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2F30839-C5AD-4AD1-9118-2FD3A3CF5FE0}</ProjectGuid>
+    <ProjectGuid>{B0ADE72F-CE42-442E-AB11-96E8E3852152}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Cours2Object_Exercice</RootNamespace>
-    <AssemblyName>Cours2Object Exercice</AssemblyName>
+    <RootNamespace>Cours3_Exercice</RootNamespace>
+    <AssemblyName>Cours3 Exercice</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramPartielAffichage.cs" />
+    <Compile Include="ProgramPartielLoading.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

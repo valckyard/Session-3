@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LibS3;
+using LibS3.C1;
 
 namespace Cours2Objet
 {
@@ -10,11 +8,11 @@ namespace Cours2Objet
     {
         static void Main(string[] args)
         {
-			var CAD = new DevisesMonaitaires (DevName.CAD, 0.72);
+			var CAD = new DevisesMonaitairesC1 (DevName.CAD, 0.72);
 			//var USD = new DevisesMonaitaires (DevName.USD, 1.0);
-			var EUR = new DevisesMonaitaires (DevName.EUR, 1.32);
+			var EUR = new DevisesMonaitairesC1 (DevName.EUR, 1.32);
 
-			var Pierre = new CompteBancaire ("Pierre Bono", 0.2, CAD);
+			var Pierre = new CompteBancaireC1 ("Pierre Bono", 0.2, CAD);
 
 			Pierre.Crediter (20.22);
 			Pierre.Debiter (2.11);

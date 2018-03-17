@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Cours2Object_Exercice_2
+namespace LibS3.C2
 {
-    public class Rectangle
+    public class RectangleC2
     {
         public int Longeur { get; set; }
         public int Largeur { get; set; }
 
-        public Rectangle(int longeur, int largeur)
+        public RectangleC2(int longeur, int largeur)
         {
             Longeur = longeur;
             Largeur = largeur;
