@@ -38,7 +38,12 @@ namespace LibS3.C3
 
         public void Afficher(PointC3 point)
         {
-            Console.WriteLine($"\nRayon : {Rayon}\nDiametre : {Rayon*2}\nPerimetre : {GetPerimetre()}\nSurface : {GetSurface()}\nPoint Externe : {point.Afficher()}\nPoint Appartient ? : {Appartient(point)}");
+            Console.WriteLine($"\nRayon              : {Rayon}" +
+                              $"\nDiametre           : {Rayon*2}" +
+                              $"\nPerimetre          : {GetPerimetre()}" +
+                              $"\nSurface            : {GetSurface()}" +
+                              $"\nPoint Externe      : {point.Afficher()}" +
+                              $"\nPoint Appartient ? : {Appartient(point)}");
         }
 }
 }

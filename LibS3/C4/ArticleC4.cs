@@ -45,27 +45,40 @@ namespace LibS3.C4
 
         public string CalculerTotal()
         {
-            return (PrixArticle + (PrixArticle * Taxes.Tvq) + (PrixArticle * Taxes.Tps)).ToString("C2");
+            return (PrixArticle + (PrixArticle * Taxes.Tvq) + (PrixArticle * Taxes.Tps)).ToString();
         }
 
+
+
+        //METTRE EN METHODE STAT
         public void AfficherArticle()
         {
             {
-                Console.Write("ArtiCle     : " + Designation + "\n" +
+                if (Taxes == null & PrixArticle ==0 & Designation == null & References == null)
+                {
+                    Console.WriteLine("Cet Article est initialise mais vide...");
+                }
+                else
+                {
+
+                    Console.Write("Article     : " + Designation + "\n" +
                                   "Description : " + References + "\n");
-                if (PrixArticle != 0)
-                {
-                    Console.Write("Prix        : " + PrixArticle.ToString("C2") + "\n");
-                }
-                if (Taxes != null)
-                {
-                    Console.Write("TVQ         : " + (PrixArticle * Taxes.Tvq).ToString("C2") + "\n" +
+                    if (Math.Abs(PrixArticle) > 0)
+                    {
+                        Console.Write("Prix        : " + PrixArticle.ToString("C2") + "\n");
+                    }
+
+                    if (Taxes != null)
+                    {
+                        Console.Write("TVQ         : " + (PrixArticle * Taxes.Tvq).ToString("C2") + "\n" +
                                       "TPS         : " + (PrixArticle * Taxes.Tps).ToString("C2") + "\n" +
-                                      $"Prix Total  : {CalculerTotal()}");
-                }
-                if (PrixArticle > 0 & Taxes == null)
-                {
-                    Console.Write("Prix Total   : " + PrixArticle.ToString("C2") + "(Aucune Taxes Lie)\n");
+                                     $"Prix Total  : {CalculerTotal()}");
+                    }
+
+                    if (PrixArticle > 0 & Taxes == null)
+                    {
+                        Console.Write("Prix Total  : " + PrixArticle.ToString("C2") + "(Aucune Taxes Lie)\n");
+                    }
                 }
             }
         }
