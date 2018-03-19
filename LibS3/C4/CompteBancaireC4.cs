@@ -24,6 +24,19 @@ namespace LibS3.C4
             Solde += montant;
         }
 
+        public void Crediter(double montant, DevisesMonaitairesC1 converttothisdevise)
+        {
+            if (Devise.Name == converttothisdevise.Name)
+            {
+                Solde += montant;
+            }
+            else
+            {
+                Solde += (montant * Devise.Taux) * converttothisdevise.Taux;
+
+            }
+        }
+
         public void Debiter(double montant)
         {
             Solde -= montant;
