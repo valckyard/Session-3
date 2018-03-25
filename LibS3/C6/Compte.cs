@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Cours6Object_Exercice
+﻿namespace LibS3.C6
 {
-    class Compte
+    public class Compte
     {
         public static int CompteNumIdIncrement { get; private set; }
         //jai fait les attributs old school pour le besoin de l exercise omis Comptenum

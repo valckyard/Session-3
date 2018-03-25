@@ -1,4 +1,5 @@
 ﻿using System;
+using LibS3.C6;
 
 namespace Cours6Object_Exercice
 {

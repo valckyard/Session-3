@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using C6Lib;
 
-namespace C6Lib
+namespace Cours4Object_Exercice
 {
     class Compte
     {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Cours6Object_Exercice
+﻿namespace LibS3.C6
 {
     public class Client
     {

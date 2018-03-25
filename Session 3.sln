@@ -27,10 +27,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cours6Object", "Cours6Objec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cours6Object Exercice", "Cours6Object Exercice\Cours6Object Exercice.csproj", "{0A4BC443-9F13-4F96-9071-15F2D48A6EBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C6Lib", "C6Lib\C6Lib.csproj", "{462FCABE-C581-4A94-A4AD-D47A69109E0C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGetSet", "TestGetSet\TestGetSet.csproj", "{86B6EB30-E245-4374-9E8F-5F88847A7F6D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,14 +81,6 @@ Global
 		{0A4BC443-9F13-4F96-9071-15F2D48A6EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A4BC443-9F13-4F96-9071-15F2D48A6EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A4BC443-9F13-4F96-9071-15F2D48A6EBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{462FCABE-C581-4A94-A4AD-D47A69109E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{462FCABE-C581-4A94-A4AD-D47A69109E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{462FCABE-C581-4A94-A4AD-D47A69109E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{462FCABE-C581-4A94-A4AD-D47A69109E0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86B6EB30-E245-4374-9E8F-5F88847A7F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86B6EB30-E245-4374-9E8F-5F88847A7F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86B6EB30-E245-4374-9E8F-5F88847A7F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86B6EB30-E245-4374-9E8F-5F88847A7F6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
