@@ -5,10 +5,10 @@ namespace LibS3.C4
 {
     public class ArticleC4
     {
-        private string References { get; set; }
-        private double PrixArticle { get; set; }
-        private TaxesC3 Taxes { get; set; }
-        private string Designation { get; set; }
+        public string References { get; set; }
+        public double PrixArticle { get; set; }
+        public TaxesC3 Taxes { get; set; }
+        public string Designation { get; set; }
 
         public ArticleC4()
         {

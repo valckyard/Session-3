@@ -12,8 +12,8 @@ namespace Cours4Object_Exercice
     {
         static void Main(string[] args)
         {
-            var taxes = new TaxesC3(0.095,0.005);
-            var article1 = new ArticleC4("Vraiment pas bon",1.60,taxes,"Cherry Blossom");
+            var taxes = new TaxesC3(0.095, 0.005);
+            var article1 = new ArticleC4("Vraiment pas bon", 1.60, taxes, "Cherry Blossom");
             article1.AfficherArticle();
 
             Console.ReadLine();
@@ -26,15 +26,15 @@ namespace Cours4Object_Exercice
             Console.ReadLine();
             Console.Clear();
 
-            var article2 = new ArticleC4("Legume vert avec des feuilles","Salade Iceberg");
+            var article2 = new ArticleC4("Legume vert avec des feuilles", "Salade Iceberg");
             article2.AfficherArticle();
 
             Console.ReadLine();
             Console.Clear();
 
-            var article3 = new ArticleC4(null,1.10,null,null);
+            var article3 = new ArticleC4(null, 1.10, null, null);
             article3.AfficherArticle();
-            
+
 
             Console.ReadLine();
             Console.Clear();
@@ -45,35 +45,37 @@ namespace Cours4Object_Exercice
             Console.ReadLine();
 
         }
+
         public static void AfficherArticle(ArticleC4 art)
         {
             {
-                if (art.Taxes == null & PrixArticle == 0 & Designation == null & References == null)
+                if (art.Taxes == null & art.PrixArticle == 0 & art.Designation == null & art.References == null)
                 {
                     Console.WriteLine("Cet Article est initialise mais vide...");
                 }
                 else
                 {
 
-                    Console.Write("Article     : " + Designation + "\n" +
-                                  "Description : " + References + "\n");
-                    if (Math.Abs(PrixArticle) > 0)
+                    Console.Write("Article     : " + art.Designation + "\n" +
+                                  "Description : " + art.References + "\n");
+                    if (Math.Abs(art.PrixArticle) > 0)
                     {
-                        Console.Write("Prix        : " + PrixArticle.ToString("C2") + "\n");
+                        Console.Write("Prix        : " + art.PrixArticle.ToString("C2") + "\n");
                     }
 
-                    if (Taxes != null)
+                    if (art.Taxes != null)
                     {
-                        Console.Write("TVQ         : " + (PrixArticle * Taxes.Tvq).ToString("C2") + "\n" +
-                                      "TPS         : " + (PrixArticle * Taxes.Tps).ToString("C2") + "\n" +
-                                      $"Prix Total  : {CalculerTotal()}");
+                        Console.Write("TVQ         : " + (art.PrixArticle * art.Taxes.Tvq).ToString("C2") + "\n" +
+                                      "TPS         : " + (art.PrixArticle * art.Taxes.Tps).ToString("C2") + "\n" +
+                                      $"Prix Total  : {art.CalculerTotal()}");
                     }
 
-                    if (PrixArticle > 0 & Taxes == null)
+                    if (art.PrixArticle > 0 & art.Taxes == null)
                     {
-                        Console.Write("Prix Total  : " + PrixArticle.ToString("C2") + "(Aucune Taxes Lie)\n");
+                        Console.Write("Prix Total  : " + art.PrixArticle.ToString("C2") + "(Aucune Taxes Lie)\n");
                     }
                 }
             }
         }
+    }
 }
