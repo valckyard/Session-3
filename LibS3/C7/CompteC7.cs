@@ -47,12 +47,12 @@ namespace LibS3.C7
             ++_codeincrement;
         }
 
-        public void Depot(double somme)
+        public virtual void Depot(double somme)
         {
             Solde += somme;
         }
 
-        public void Retrait(double somme)
+        public virtual void Retrait(double somme)
         {
             Solde -= somme;
         }

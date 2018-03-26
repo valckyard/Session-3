@@ -2,7 +2,7 @@
 
 namespace LibS3.C7
 {
-    public class CompteChequeC7 : CompteC6
+    public class CompteChequeC6note : CompteC6
     {
         private int _nombreOperations;
 
@@ -12,7 +12,7 @@ namespace LibS3.C7
             set { _nombreOperations = value; }
         }
 
-        public CompteChequeC7(ClientC6 clientC6, int _nombreOperations) : base(clientC6) //utilise le Client seter de base CompteC6
+        public CompteChequeC6note(ClientC6 clientC6, int _nombreOperations) : base(clientC6) //utilise le Client seter de base CompteC6
         {
             this._nombreOperations = _nombreOperations;
         }

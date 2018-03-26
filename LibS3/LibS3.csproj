@@ -53,9 +53,9 @@
     <Compile Include="C6\CompteC6.cs" />
     <Compile Include="C7\BatimentC7.cs" />
     <Compile Include="C7\CompteC7.cs" />
-    <Compile Include="C7\CompteChequeC7.cs" />
+    <Compile Include="C7\CompteChequeC6note.cs" />
+    <Compile Include="C7\CompteEpargneC6note.cs" />
     <Compile Include="C7\CompteEpargneC7.cs" />
-    <Compile Include="C7\CompteEpargneEX2C7.cs" />
     <Compile Include="C7\ComptePayantC7.cs" />
     <Compile Include="C7\MaisonC7.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

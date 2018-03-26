@@ -2,7 +2,7 @@
 
 namespace LibS3.C7
 {
-    public class CompteEpargneC7 : CompteC6
+    public class CompteEpargneC6note : CompteC6
     {
         private double _tauxinteret;
 
@@ -12,7 +12,7 @@ namespace LibS3.C7
             set { _tauxinteret = value; }
         }
 
-        public CompteEpargneC7(ClientC6 clientC6, double _tauxinteret) : base(clientC6)
+        public CompteEpargneC6note(ClientC6 clientC6, double _tauxinteret) : base(clientC6)
         {
             this._tauxinteret = _tauxinteret;
         }

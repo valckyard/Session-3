@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace LibS3.C7
 {
-    public class CompteEpargneEX2C7 : CompteC7
+    public class CompteEpargneC7 : CompteC7
     {
         private int _tauxinteret;
 
-        public CompteEpargneEX2C7()
+        public CompteEpargneC7(): base()
         {
             _tauxinteret = 6;
         }
 
-        public CompteEpargneEX2C7(double Solde): base(Solde)
+        public CompteEpargneC7(double solde): base(solde)
         {
             base.Solde = Solde;
             _tauxinteret = 6;
