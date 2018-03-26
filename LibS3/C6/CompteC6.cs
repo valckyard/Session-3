@@ -1,6 +1,6 @@
 ﻿namespace LibS3.C6
 {
-    public class Compte
+    public class CompteC6
     {
         public static int CompteNumIdIncrement { get; private set; }
         //jai fait les attributs old school pour le besoin de l exercise omis Comptenum
@@ -18,21 +18,21 @@
         public double Solde
         {
             get { return _solde; }
-           private set { _solde = value; }
+            protected set { _solde = value; }
         }
 
-        private Client _client;
-        public Client Client
+        private ClientC6 _clientC6;
+        public ClientC6 ClientC6
         {
-            get { return _client; }
-            set { _client = value; }
+            get { return _clientC6; }
+            set { _clientC6 = value; }
         }
 
 
         //constructor
-        public Compte(Client _client)
+        public CompteC6(ClientC6 clientC6)
         {
-            this._client = _client;
+            this._clientC6 = clientC6;
             _solde = 0;
             _compteClientId = CompteNumIdIncrement;
             CompteNumIdIncrement++;
@@ -44,8 +44,8 @@
             _solde += montant;
         }
 
-        //Crediter d un autre compte et enlever l'argent
-        public void Crediter(Compte transfer, double montant)
+        //Crediter d un autre compteC6 et enlever l'argent
+        public void Crediter(CompteC6 transfer, double montant)
         {
             if ((transfer.Solde - montant) >= 0)  //nofunds
             {
@@ -54,7 +54,7 @@
             }
         }
 
-        //debiter compte // sortie d'argent simple
+        //debiter compteC6 // sortie d'argent simple
         public void Debiter(double montant) //no funds
         {
             if ((Solde - montant) >= 0)
@@ -64,8 +64,8 @@
             
         }
 
-        //Debiter and transferer a un autre compte
-        public void Debiter(Compte transfer, double montant)
+        //Debiter and transferer a un autre compteC6
+        public void Debiter(CompteC6 transfer, double montant)
         {
             if ((Solde - montant) >= 0) //no funds
             {

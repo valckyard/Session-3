@@ -1,6 +1,6 @@
 ﻿namespace LibS3.C6
 {
-    public class Client
+    public class ClientC6
     {
         private static int _idusers;
 
@@ -34,7 +34,7 @@
         }
 
         //constructeur Simple
-        public Client(int _id, string _nom, string _prenom, long _tel)
+        public ClientC6(int _id, string _nom, string _prenom, long _tel)
         {
             this._id = _id; 
             this._nom = _nom;
@@ -43,7 +43,7 @@
         }
 
         //Constructeur Dynamique de NoCompte
-        public Client(string _nom, string _prenom, long _tel)
+        public ClientC6(string _nom, string _prenom, long _tel)
         {
             this._id = _idusers;
             this._nom = _nom;
