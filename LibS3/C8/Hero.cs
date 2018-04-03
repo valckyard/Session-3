@@ -1,4 +1,4 @@
-﻿namespace Cours8Object_Exercice
+﻿namespace LibS3.C8
 {
     public class Hero : Villagois
     {
@@ -49,9 +49,9 @@
                    $"Force        : {base.Force}\n" +
                    $"Endurance    : {base.Endurance}\n" +
                    $"Dexterite    : {base.Dexterite}\n" +
-                   $"Intelligence : {base.Intelligence}\n" +
-                   $"Arme         : {Arme.Nom}\n" +
-                   $"Armure       : {Armure.Nom}\n";
+                   $"Intelligence : {base.Intelligence}" +
+                   $"{Inventaire()}";
+
         }
 
 

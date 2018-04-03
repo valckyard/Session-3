@@ -1,4 +1,5 @@
 ﻿using System;
+using LibS3.C8;
 
 namespace Cours8Object_Exercice
 {

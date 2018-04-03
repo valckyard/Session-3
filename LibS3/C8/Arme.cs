@@ -1,4 +1,4 @@
-﻿namespace Cours8Object_Exercice
+﻿namespace LibS3.C8
 {
     public class Arme : Objet
     {
