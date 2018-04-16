@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4DABB73B-170D-4EFB-B0F2-687E03E1AC2C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibS3</RootNamespace>
-    <AssemblyName>LibS3</AssemblyName>
+    <ProjectGuid>{D2667C3C-1974-4F0B-9ED7-A88AD3AB82A2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cours12Object</RootNamespace>
+    <AssemblyName>Cours12Object</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,42 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C1\CompteBancaireC1.cs" />
-    <Compile Include="C1\DevisesMonaitairesC1.cs" />
-    <Compile Include="C3\CercleC3.cs" />
-    <Compile Include="C3\EmployeC3.cs" />
-    <Compile Include="C2\LivreC2.cs" />
-    <Compile Include="C3\LivreC3.cs" />
-    <Compile Include="C3\PointC3.cs" />
-    <Compile Include="C4\ArticleC4.cs" />
-    <Compile Include="C4\CompteBancaireC4.cs" />
-    <Compile Include="C6\ClientC6.cs" />
-    <Compile Include="C6\CompteC6.cs" />
-    <Compile Include="C7\BatimentC7.cs" />
-    <Compile Include="C7\CompteC7.cs" />
-    <Compile Include="C7\CompteChequeC6note.cs" />
-    <Compile Include="C7\CompteEpargneC6note.cs" />
-    <Compile Include="C7\CompteEpargneC7.cs" />
-    <Compile Include="C7\ComptePayantC7.cs" />
-    <Compile Include="C7\MaisonC7.cs" />
-    <Compile Include="C8\ArmeC8.cs" />
-    <Compile Include="C8\ArmureC8.cs" />
-    <Compile Include="C8\HeroC8.cs" />
-    <Compile Include="C8\ObjetC8.cs" />
-    <Compile Include="C8\VillagoisC8.cs" />
-    <Compile Include="C9\C9Corrige 2\ClientC9.cs" />
-    <Compile Include="C9\C9Corrige 2\CompteC9.cs" />
-    <Compile Include="C9\C9Corrige\ArmeC9.cs" />
-    <Compile Include="C9\C9Corrige\ArmureC9.cs" />
-    <Compile Include="C9\C9Corrige\HeroC9.cs" />
-    <Compile Include="C9\C9Corrige\ObjetC9.cs" />
-    <Compile Include="C9\C9Corrige\VillagoisC9.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="C2\RectangleC2.cs" />
-    <Compile Include="C3\RectangleC3.cs" />
-    <Compile Include="C2\TaxesC2.cs" />
-    <Compile Include="C3\TaxesC3.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

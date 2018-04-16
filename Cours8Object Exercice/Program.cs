@@ -9,11 +9,11 @@ namespace Cours8Object_Exercice
         static void Main(string[] args)
         {
             //Cree Villagois
-            var vil1 = new Villagois("Bob",4,100,55,9);
-            var vil2 = new Villagois("Bobette", 2, 100, 99, 67);
+            var vil1 = new VillagoisC8("Bob",4,100,55,9);
+            var vil2 = new VillagoisC8("Bobette", 2, 100, 99, 67);
 
             //Cree Hero : Villagois
-            var hero1 = new Hero("Joe",12,100,55,12);
+            var hero1 = new HeroC8("Joe",12,100,55,12);
 
             //Affiche Villagois : Hero
             Console.WriteLine(hero1.ToString());
@@ -24,8 +24,8 @@ namespace Cours8Object_Exercice
             Console.WriteLine(vil2.ToString());
 
             //Cree Armes & Armure
-            var arme1 = new Arme("Crayon Destructeur", 1);
-            var armure1 = new Armure("Manteau de Pluie" , 1);
+            var arme1 = new ArmeC8("Crayon Destructeur", 1);
+            var armure1 = new ArmureC8("Manteau de Pluie" , 1);
             //Equip Test
             hero1.Equiper(arme1);
             hero1.Equiper(armure1);
@@ -53,11 +53,11 @@ namespace Cours8Object_Exercice
         /// <returns></returns>
         public static string GetAffichageNbObjets()
         {
-            return "Nombre d'objets(and Childs) cree : " + Objet.Objectidcounter;
+            return "Nombre d'objets(and Childs) cree : " + ObjetC8.Objectidcounter;
         }
         public static string GetAffichageNbVillagois()
         {
-            return "Nombre de villagois(and Childs) cree : " + Villagois.VillagoisIdCounter;
+            return "Nombre de villagois(and Childs) cree : " + VillagoisC8.VillagoisIdCounter;
         }
     }
 }
