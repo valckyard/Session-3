@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace Cours14Object_Exercice
+namespace Cours15Object_C14Form
 {
     public class EleveTempsPartiel : Eleve
     {
@@ -16,6 +17,11 @@ namespace Cours14Object_Exercice
         {
         }
 
+        public override List<Cours> GetCoursOpt()
+        {
+            return base.GetCours();
+        }
+
         public override string AssignerCours(Cours cours, bool optionnel)
         {
            return base.AssignerCours(cours);
@@ -24,6 +30,11 @@ namespace Cours14Object_Exercice
         public override string EnleverCours(Cours cours, bool optionnel)
         {
             return base.EnleverCours(cours);
+        }
+
+        public override string LoadCours(Cours cours, bool optionnel)
+        {
+            return base.LoadCours(cours);
         }
     }
 }

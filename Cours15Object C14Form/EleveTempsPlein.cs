@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Cours14Object_Exercice
+namespace Cours15Object_C14Form
 {
     public class EleveTempsPlein : Eleve
     {
         private List<Cours> _coursOptionnels { get; set; }
+
+        //for save
+        public override List<Cours> GetCoursOpt(){return _coursOptionnels;}
 
 
         public EleveTempsPlein()
@@ -22,6 +25,7 @@ namespace Cours14Object_Exercice
             _coursOptionnels = new List<Cours>();
         }
 
+
         /// <summary>
         //Assigner les cours reg et optionnels d'une 2eime maniere
         /// </summary>
@@ -33,7 +37,34 @@ namespace Cours14Object_Exercice
 
             if (!optionnel)
             {
+                
                 return base.AssignerCours(cours);
+            }
+            else
+            {
+                if (base._coursBase.Count == 3)
+                {
+                    if (_coursOptionnels.Count < 2 & !base._coursBase.Contains(cours) &
+                        !this._coursOptionnels.Contains(cours))
+                    {
+                        this._coursOptionnels.Add(cours);
+                        cours.AjouterNote(CodePermanent, 0);
+                        return $"Le cours optionnel a ete ajoute !";
+                    }
+                    else
+                    {
+                        return $"Vous ne pouvez pas ajouter ce cours optionnels !";
+                    }
+                }
+                else return $"Le cours n'a pas pu etre ajoute, vous n'avez pas tout vos cours reguliers !";
+            }
+        }
+        public override string LoadCours(Cours cours, bool optionnel)
+        {
+
+            if (!optionnel)
+            {
+                return base.LoadCours(cours);
             }
             else
             {
@@ -55,7 +86,6 @@ namespace Cours14Object_Exercice
         }
 
 
-
         /// <summary>
         /// Remove a Class
         /// </summary>
@@ -66,7 +96,14 @@ namespace Cours14Object_Exercice
         {
             if (!optionnel)
             {
-                return base.EnleverCours(cours);
+                if (this._coursOptionnels.Count == 0)
+                {
+                    return base.EnleverCours(cours);
+                }
+                else
+                {
+                    return "Il reste des cours Optionnels !";
+                }
             }
             else
             {

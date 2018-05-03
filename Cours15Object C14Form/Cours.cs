@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Cours14Object_Exercice
+namespace Cours15Object_C14Form
 {
     public class Cours
     {
@@ -30,12 +30,12 @@ namespace Cours14Object_Exercice
         /// <param name="eleve"></param>
         /// <param name="note"></param>
         /// <returns></returns>
-        public string AjouterNote(Eleve eleve, double note)
+        public string AjouterNote(string elevecp, double note)
         {
             //new
-            if (!this.Notes.ContainsKey(eleve.CodePermanent))
+            if (!this.Notes.ContainsKey(elevecp))
             {
-                this.Notes.Add(eleve.CodePermanent, note);
+                this.Notes.Add(elevecp, note);
                 return $"La note de a ete ajoutee!";
             }
             //existing
@@ -43,7 +43,7 @@ namespace Cours14Object_Exercice
             {
                 foreach (string n in Notes.Keys.ToList())
                 {
-                    if (eleve.CodePermanent == n)
+                    if (elevecp == n)
                     {
                         this.Notes[n] = note;
                     }
@@ -52,6 +52,22 @@ namespace Cours14Object_Exercice
                 return $"La note de a ete Modifie!";
             }
         }
+
+        public string EnleverNote(string elevecp)
+        {
+            if (!this.Notes.ContainsKey(elevecp))
+            {
+                this.Notes.Remove(elevecp);
+                return $"La note de a ete enleve!";
+            }
+            //existing
+            else
+            {
+                return $"La note n'a pas pu etre enleve!";
+            }
+        
+    }
+
 
         /// <summary>
         /// retoune une liste contenant le code permanent et la note

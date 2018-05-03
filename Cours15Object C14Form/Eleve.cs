@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Cours14Object_Exercice
+namespace Cours15Object_C14Form
 {
     public abstract class Eleve
     {
@@ -10,14 +10,18 @@ namespace Cours14Object_Exercice
         public string CodePermanent { get; protected set; }
 
         //Garder ces infos confidentielles
-        protected string _nom { get; set; }
+        protected string _nom { get;  set; }
         protected string _prenom { get;  set; }
         protected string _adresse { get; set; }
         protected DateTime _dateNaissance { get; set; }
         protected List<Cours> _coursBase { get; set; }
 
-        //for save
-
+        public string GetNom() { return _nom; }
+        public string GetPrenom() { return _prenom; }
+        public string GetAdress() { return _adresse; }
+        public string GetNaissance() { return _dateNaissance.ToShortDateString(); }
+        public List<Cours> GetCours() { return _coursBase; }
+        public abstract List<Cours> GetCoursOpt();
 
         public Eleve(string codePermanent, string nom, string prenom, string adresse, DateTime dateNaissance)
         {
@@ -43,6 +47,7 @@ namespace Cours14Object_Exercice
             if (this._coursBase.Count < 3 & !this._coursBase.Contains(cours))
             {
                 this._coursBase.Add(cours);
+                cours.AjouterNote(CodePermanent, 0);
                 return $"Le cours a ete ajoute !";
             }
             else
@@ -50,6 +55,7 @@ namespace Cours14Object_Exercice
                 return $"Vous ne pouvez pas ajouter de cours !";
             }
         }
+      
 
 
         /// <summary>
@@ -62,6 +68,7 @@ namespace Cours14Object_Exercice
             if (_coursBase.Contains(cours))
             {
                 _coursBase.Remove(cours);
+                cours.EnleverNote(CodePermanent);
                 return $"Le cours a ete enleve !";
             }
             else
@@ -73,6 +80,7 @@ namespace Cours14Object_Exercice
 
         public abstract string AssignerCours(Cours cours, bool optionnel);
         public abstract string EnleverCours(Cours cours, bool optionnel);
+        public abstract string LoadCours(Cours cours, bool optionnel);
         /// <summary>
         /// Creation des notes du bulletin de base
         /// </summary>
@@ -96,6 +104,18 @@ namespace Cours14Object_Exercice
             return noteList;
         }
 
+        public string LoadCours(Cours cours)
+        {
+            if (this._coursBase.Count < 3 & !this._coursBase.Contains(cours))
+            {
+                this._coursBase.Add(cours);
+                return $"Le cours a ete ajoute !";
+            }
+            else
+            {
+                return $"Vous ne pouvez pas ajouter de cours !";
+            }
+        }
 
         /// <summary>
         /// Impression de Bullletin et retour des valeurs pour affichage
